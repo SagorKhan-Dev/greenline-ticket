@@ -3,6 +3,8 @@ let seatsCount = parseInt(document.getElementById("seats-count").innerText);
 let totalPrice = parseInt(document.getElementById("total-price").innerText);
 let grandTotal = parseInt(document.getElementById("grand-total").innerText);
 const applyBtn = document.getElementById("apply-btn");
+const inputInfoBtn = document.getElementById("input-info-btn");
+
 const selectSeats = [];
 
 const seats = document.getElementsByClassName("seats");
@@ -54,6 +56,10 @@ function selectseat(seatName) {
 
     if (seatsCount >= 4) {
       applyBtn.disabled = false;
+    }
+
+    if (seatsCount >= 1) {
+      inputInfoBtn.disabled = false;
     }
   }
 }
